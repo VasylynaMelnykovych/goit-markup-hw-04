@@ -7,6 +7,7 @@
   --cloud-color: #f4f4fd;
   --cornflower-color: #e7e9fc;
   --color-green: #31d0aa;
+  --color-light-slate: #8e8f99;
 }
 
 body {
@@ -165,6 +166,8 @@ button {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--cornflower-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .menu-link {
@@ -196,6 +199,9 @@ button {
   padding-top: 188px;
   padding-bottom: 188px;
   background-color: var(--secondary-text-color);
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -233,6 +239,7 @@ button {
 .modal-btn:hover,
 .modal-btn:focus {
   background: var(--pointing-state-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ================ /HERO IMAGE ================= */
@@ -326,13 +333,23 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--color-light-slate);
   border-radius: 4px;
   padding: 16px 32px;
 }
 
+.customers-link:hover,
+.customers-link:focus {
+  border: 1px solid var(--pointing-state-color);
+}
+
 .customers-icon {
-  fill: #8e8f99;
+  fill: var(--color-light-slate);
+}
+
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+  fill: var(--pointing-state-color);
 }
 /* ================ /CUSTOMERS SECTION  ============== */
 
@@ -398,7 +415,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--accent-color);
-  background: var(--cloud-color);
+  background-color: var(--cloud-color);
   border: 1px solid var(--cornflower-color);
   border-radius: 4px;
   padding: 12px 24px;
@@ -408,6 +425,8 @@ button {
 .filters-btn:focus {
   color: var(--primary-white-color);
   background: var(--pointing-state-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-section {
@@ -438,7 +457,12 @@ button {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--cornflower-color);
   border-top: none;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 /* ================ /PORTFOLIO SECTION ================= */
